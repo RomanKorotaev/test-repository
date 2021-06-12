@@ -2481,7 +2481,6 @@ const atTheOldToad = {
         //console.log(potion.name);
         if (potion.name !== newPotion.name) {
            return  this.potions.push(newPotion);
-              //return this.potions.push({ name: 'potionName', price: 0 });
           }
       }
   },
