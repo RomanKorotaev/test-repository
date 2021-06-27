@@ -779,11 +779,10 @@ console.log(firstInvoke);
 // Почта kiwi@mail.uk добавлена в рассылку.
 
 console.log(service.mailingList);
-/* ['mango@mail.com', 
-    'poly@hotmail.de', 
+/* ['mango@mail.com', 'poly@hotmail.de', 
     'ajax@jmail.net', 
     'kiwi@mail.uk']*/
-const secondInvoke = logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service));
+/*const secondInvoke = logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service));
 console.log(secondInvoke);
 // Почта poly@hotmail.de удалена из рассылки.
 
