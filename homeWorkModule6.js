@@ -520,9 +520,11 @@ console.log(changeEven([1, 2, 3, 4, 5], 10));
 
 /*  Задание 10
 Метод map()
-Большинство перебирающих методов массива это чистые функции. Они создают новый массив, заполняют его, применяя к значению каждого элемента указанную коллбек-функцию, после чего возвращают этот новый массив.
+Большинство перебирающих методов массива это чистые функции. Они создают новый массив, заполняют его, применяя к значению 
+каждого элемента указанную коллбек-функцию, после чего возвращают этот новый массив.
 
-Метод map(callback) используется для трансформации массива. Он вызывает коллбек-функцию для каждого элемента исходного массива, а результат её работы записывает в новый массив, который и будет результатом выполнения метода.
+Метод map(callback) используется для трансформации массива. Он вызывает коллбек-функцию для каждого элемента исходного массива,
+ а результат её работы записывает в новый массив, который и будет результатом выполнения метода.
 
 массив.map((element, index, array) => {
   // Тело коллбек-функции
@@ -801,6 +803,8 @@ console.log(genres2);
 
 */
 
+/*
+
 const usersArray =
 [
   {
@@ -885,8 +889,134 @@ const usersArray =
 
 // Пиши код ниже этой строки
 const getUserNames = users => {
-    users.flatMap (users.name)
-  
-return
+  let tmpArray = [];   
+  tmpArray = users.map (user=>user.name)
+  return tmpArray;
   };
   // Пиши код выше этой строки
+
+
+// Мой вариант с более простым синтаксисом
+//function getUserNames(users) {
+//  let tmpArray = [];   
+//  tmpArray = users.map (user=>user.name)
+//  return tmpArray;
+//};
+// Пиши код выше этой строки
+
+    console.log (getUserNames(usersArray))
+
+    */
+
+
+    
+
+//--------------------------------------------------
+
+
+/*  Задание 14
+Задача. Почты пользователей
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+
+[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    skills: ['ipsum', 'lorem'],
+    gender: 'male',
+    age: 37,
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+    gender: 'female',
+    age: 34,
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
+    gender: 'male',
+    age: 24,
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    skills: ['adipisicing', 'irure', 'velit'],
+    gender: 'female',
+    age: 21,
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    skills: ['ex', 'culpa', 'nostrud'],
+    gender: 'male',
+    age: 27,
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    skills: ['non', 'amet', 'ipsum'],
+    gender: 'male',
+    age: 38,
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    skills: ['lorem', 'veniam', 'culpa'],
+    gender: 'female',
+    age: 39,
+  },
+];
+Задание
+Дополни функцию getUserEmails(users) так, чтобы она возвращала массив почтовых адресов пользователей (свойство email) из массива объектов в параметре users.
+
+Тесты
+Объявлена переменная getUserNames.
+Переменной getUserNames присвоена стрелочная функция с параметром (users).
+Для перебора параметра users используется метод map().
+Вызов функции с указанным массивом пользователей возвращает массив ['moorehensley@indexia.com', 'sharlenebush@tubesys.com', 'rossvazquez@xinware.com', 'elmahead@omatom.com', 'careybarr@nurali.com', 'blackburndotson@furnigeer.com', 'shereeanthony@kog.com'].
+Вызов функции со случайными, но валидными аргументами, возвращает правильное значение.
+
+*/
+/*
+
+// Пиши код ниже этой строки
+const getUserEmails = users => {
+  let tmpArray = [];   
+  tmpArray = users.map (user=>user.email)
+  return tmpArray;
+
+  };
+  // Пиши код выше этой строки
+
+  */
