@@ -2716,7 +2716,8 @@ const isAnyUserActive = users => {
 /*  Задание 30
 
 Метод reduce()
-Метод reduce(callback, initialValue) используется для последовательной обработки каждого элемента массива с сохранением промежуточного результата, как аккумулятор. Немного сложнее других в усвоении, но результат стоит того.
+Метод reduce(callback, initialValue) используется для последовательной обработки каждого элемента массива
+ с сохранением промежуточного результата, как аккумулятор. Немного сложнее других в усвоении, но результат стоит того.
 
 массив.reduce((previousValue, element, index, array) => {
   // Тело коллбек-функции
@@ -4021,14 +4022,42 @@ const userArray =
 ]
 
 
+
+//--------------------------------------------------
+
+
+/*  Задание 43
+Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных
+ имён друзей (свойство friends) отсортированный по алфавиту .
+*/
 function getNamesSortedByFriendCount(users) {
-
-  return [...users].sort((a, b) => a.friends.length - b.friends.length)
-    .map(user => user.name)
-  .filter( (user, index, array) => array.indexOf(user) === index)
+  return users
+    .flatMap(user => user.friends)
+    .filter((user, index, array) => array.indexOf(user) === index)
+    .sort((nameFirst, nameSecond) => nameFirst.localeCompare(nameSecond))
 }
+//console.table(userArray)
+console.log("getNamesSortedByFriendCount(userArray) ", getNamesSortedByFriendCount(userArray))
 
 
-console.table(userArray)
-console.table (getNamesSortedByFriendCount(userArray))
 
+//--------------------------------------------------
+
+
+/*  Задание 44
+
+Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий 
+баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением
+ параметра gender.
+*/
+
+
+// Пиши код ниже этой строки
+const getTotalBalanceByGender = (users, gender) => {
+  return users
+    .filter(user => user.gender === gender) 
+    .reduce((total, user) => { return total+=user.balance}, 0 )
+    
+};
+
+console.table(getTotalBalanceByGender (userArray, 'male'))
