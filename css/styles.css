@@ -4,3 +4,18 @@ body {
   color: rgb(238, 59, 59); 
 }
 */
+
+.testClass {
+  color: teal;
+  width: 30px;
+
+  border-color: red;
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+.testImgBorder {
+  border-color: red;
+  border-radius: 10px;
+  border-width: 2px;
+}
