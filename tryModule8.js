@@ -131,8 +131,11 @@ console.log(planetsInUpperCase); // ['ЗЕМЛЯ', 'МАРС', 'ВЕНЕРА', '
  */
 const coordsOutputRef = document.querySelector('.js-coords');
 let mouseMoveCbInvocationCounter = 0;
+let onScrollCounter = 0;
 
+//Чтобы функции _.throttle и _.debounce из библеотеки lodash работали - их нужно подключать ДО своего основного  js-файла
 window.addEventListener('mousemove', _.throttle(onMouseMove, 500));
+window.addEventListener('scroll', _.debounce(onScroll, 500));
 //window.addEventListener('mousemove', onMouseMove);
 
 function onMouseMove(event) {
@@ -143,6 +146,11 @@ function onMouseMove(event) {
     X: ${event.clientX},
     Y:${event.clientY}
   `;
+}
+
+function onScroll(event) {
+  onScrollCounter += 1;
+  console.log (' onScrollCounter = ',  onScrollCounter)
 }
 
 /*
