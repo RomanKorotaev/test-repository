@@ -4,7 +4,10 @@
   "description": "",
   "main": "ObjectsAndArrays.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/RomanKorotaev/test-repository/issues"
   },
-  "homepage": "https://github.com/RomanKorotaev/test-repository#readme"
+  "homepage": "https://github.com/RomanKorotaev/test-repository#readme",
+  "dependencies": {
+    "joi": "^17.4.2",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
 }
