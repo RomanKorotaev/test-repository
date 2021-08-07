@@ -209,5 +209,3 @@ function createGalleryMarkup(galleryItems) {
   });
   return markup.join('');
  }
-
- 

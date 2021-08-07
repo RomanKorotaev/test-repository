@@ -1,0 +1,19 @@
+{
+  "name": "test-repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ObjectsAndArrays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanKorotaev/test-repository.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomanKorotaev/test-repository/issues"
+  },
+  "homepage": "https://github.com/RomanKorotaev/test-repository#readme"
+}
