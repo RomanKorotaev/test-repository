@@ -96,3 +96,7 @@ body {
   color: #fff;
   background-color: #2196f3;
 }
+
+.modal {
+  background-color: yellow;
+}
